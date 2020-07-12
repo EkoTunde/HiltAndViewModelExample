@@ -38,15 +38,16 @@ class ExampleFragmentB : Fragment() {
     private fun attachObservers() {
         val tag = "DEBUG!!!"
         viewModel.message.observe(viewLifecycleOwner, Observer {
-            Log.d(tag, "onCreate: message is -> $it")
-            binding.txtMessage.text = it
+            Log.d(tag, "FragmentB: message is -> $it")
+            val txt = "$it ${it.hashCode()}"
+            binding.txtMessage.text = txt
         })
         viewModel.number.observe(viewLifecycleOwner, Observer {
-            Log.d(tag, "onCreate: number is -> $it")
+            Log.d(tag, "FragmentB: number is -> $it")
             binding.txtNumber.text = it.toString()
         })
         viewModel.boolean.observe(viewLifecycleOwner, Observer {
-            Log.d(tag, "onCreate: boolean is -> $it")
+            Log.d(tag, "FragmentB: boolean is -> $it")
             binding.txtBoolean.text = it.toString()
         })
     }
