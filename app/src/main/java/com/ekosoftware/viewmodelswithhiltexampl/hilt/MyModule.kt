@@ -1,5 +1,8 @@
-package com.ekosoftware.viewmodelswithhiltexampl
+package com.ekosoftware.viewmodelswithhiltexampl.hilt
 
+import com.ekosoftware.viewmodelswithhiltexampl.data.SomeDataSource
+import com.ekosoftware.viewmodelswithhiltexampl.domain.SomeRepoInterface
+import com.ekosoftware.viewmodelswithhiltexampl.domain.SomeRepoInterfaceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,8 +21,10 @@ class MyModule {
 
     @ActivityRetainedScoped
     @Provides
-    fun provideSomeInterface(someDataSource: SomeDataSource) : SomeInterface {
-        return SomeInterfaceImpl(someDataSource)
+    fun provideSomeInterface(someDataSource: SomeDataSource) : SomeRepoInterface {
+        return SomeRepoInterfaceImpl(
+            someDataSource
+        )
     }
 
 }

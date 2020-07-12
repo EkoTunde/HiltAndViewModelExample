@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/exampleFragmentA">
+
+    <fragment
+        android:id="@+id/exampleFragmentA"
+        android:name="com.ekosoftware.viewmodelswithhiltexampl.ui.a.ExampleFragmentA"
+        android:label="fragment_example_a"
+        tools:layout="@layout/fragment_example_a" >
+        <action
+            android:id="@+id/action_exampleFragmentA_to_exampleFragmentB"
+            app:destination="@id/exampleFragmentB"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/exampleFragmentB"
+        android:name="com.ekosoftware.viewmodelswithhiltexampl.ui.b.ExampleFragmentB"
+        android:label="fragment_example_b"
+        tools:layout="@layout/fragment_example_b" />
+</navigation>

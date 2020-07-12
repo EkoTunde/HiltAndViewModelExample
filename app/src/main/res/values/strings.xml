@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ViewModelsWithHiltExampl</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_a">Fragment A</string>
+    <string name="message">"Mensaje: "</string>
+    <string name="number">"Número: "</string>
+    <string name="boolean_">"Boolean: "</string>
+    <string name="fragment_b">Fragment B</string>
+    <string name="to_b">To B</string>
+    <string name="to_a">To A</string>
 </resources>
